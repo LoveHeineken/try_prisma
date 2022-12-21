@@ -61,7 +61,7 @@ async function main() {
     //   },
     // })
 
-    await prisma.user.createMany({
+    const users = await prisma.user.createMany({
       data: [
         {
           name: "Kyle",
@@ -85,6 +85,8 @@ async function main() {
         },
       ],
     })
+
+    console.log(users)
 
     // const user = await prisma.user.findMany({
     //   where: {
@@ -190,7 +192,7 @@ async function main() {
     //   }
     //  })
 
-     console.log(user)
+    //  console.log(user)
 }
 
 main()
